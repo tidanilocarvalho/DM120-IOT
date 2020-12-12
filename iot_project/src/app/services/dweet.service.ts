@@ -38,6 +38,7 @@ export class DweetService {
 
     let _lightColor: string;
     let _lightFelling: string;
+    let _buzzerOn: boolean = false;
     
     _withs = new Array<With>() 
     
@@ -61,6 +62,10 @@ export class DweetService {
         _lightFelling = "WARM";
       }
 
+      if(_with.content.status_buzzer == "1") {
+        _buzzerOn = true;
+      }
+
       let tempWith: With 
       tempWith = new With(_with.thing, 
         _with.created,
@@ -74,7 +79,8 @@ export class DweetService {
         _with.content.lumMin,
         _with.content.lumMax,
         _lightColor,
-        _lightFelling) 
+        _lightFelling,
+        _buzzerOn) 
       
       _withs.push(tempWith) 
     }

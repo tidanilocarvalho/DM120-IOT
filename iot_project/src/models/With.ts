@@ -18,6 +18,8 @@ export default class With {
     private _ligthColor: string;
     private _lightFelling: string;
 
+    private _buzzerOn: boolean;
+
     constructor(thing: string, 
         created: string, 
         content: Content, 
@@ -30,7 +32,8 @@ export default class With {
         lumMin: string, 
         lumMax: string,
         lightColor: string,
-        lightFeeling: string) {
+        lightFeeling: string,
+        buzzerOn: boolean) {
 		this._thing = thing;
 		this._created = created;
 		this._content = content;
@@ -44,6 +47,7 @@ export default class With {
         this._lumMax = lumMax;
         this._ligthColor = lightColor;
         this._lightFelling = lightFeeling;
+        this._buzzerOn = buzzerOn;
     }
 
     /**
@@ -253,6 +257,22 @@ export default class With {
      */
 	public set lightFelling(value: string) {
 		this._lightFelling = value;
+	}
+
+    /**
+     * Getter buzzerOn
+     * @return {boolean}
+     */
+	public get buzzerOn(): boolean {
+		return this._buzzerOn;
+	}
+
+    /**
+     * Setter buzzerOn
+     * @param {boolean} value
+     */
+	public set buzzerOn(value: boolean) {
+		this._buzzerOn = value;
 	}
 
 }
