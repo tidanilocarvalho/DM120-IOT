@@ -7,14 +7,37 @@ export default class With {
     private _content: Content; 
     private _date: string; 
     private _time: string;
-    
-	constructor(thing: string, created: string, content: Content, date: string, time: string) {
+
+    private _umidMin: string;
+    private _umidMax: string;
+    private _tempMin: string;
+    private _tempMax: string;
+    private _lumMin: string;
+    private _lumMax: string;
+
+    constructor(thing: string, 
+        created: string, 
+        content: Content, 
+        date: string, 
+        time: string, 
+        umidMin: string, 
+        umidMax: string,
+        tempMin: string, 
+        tempMax: string,
+        lumMin: string, 
+        lumMax: string) {
 		this._thing = thing;
 		this._created = created;
 		this._content = content;
 		this._date = date;
-		this._time = time;
-	}
+        this._time = time;
+        this._umidMin = umidMin;
+        this._umidMax = umidMax;
+        this._tempMin = tempMin;
+        this._tempMax = tempMax;
+        this._lumMin = lumMin;
+        this._lumMax = lumMax;
+    }
 
     /**
      * Getter thing
@@ -94,6 +117,103 @@ export default class With {
      */
 	public set time(value: string) {
 		this._time = value;
+	}
+
+
+    /**
+     * Getter umidMin
+     * @return {string }
+     */
+	public get umidMin(): string  {
+		return this._umidMin;
+	}
+
+    /**
+     * Getter umidMax
+     * @return {string }
+     */
+	public get umidMax(): string  {
+		return this._umidMax;
+	}
+
+    /**
+     * Setter umidMin
+     * @param {string } value
+     */
+	public set umidMin(value: string ) {
+		this._umidMin = value;
+	}
+
+    /**
+     * Setter umidMax
+     * @param {string } value
+     */
+	public set umidMax(value: string ) {
+		this._umidMax = value;
+	}
+
+    /**
+     * Getter tempMin
+     * @return {string }
+     */
+	public get tempMin(): string  {
+		return this._tempMin;
+	}
+
+    /**
+     * Getter tempMax
+     * @return {string }
+     */
+	public get tempMax(): string  {
+		return this._tempMax;
+	}
+
+    /**
+     * Getter lumMin
+     * @return {string }
+     */
+	public get lumMin(): string  {
+		return this._lumMin;
+	}
+
+    /**
+     * Getter lumMax
+     * @return {string }
+     */
+	public get lumMax(): string  {
+		return this._lumMax;
+	}
+
+    /**
+     * Setter tempMin
+     * @param {string } value
+     */
+	public set tempMin(value: string ) {
+		this._tempMin = value;
+	}
+
+    /**
+     * Setter tempMax
+     * @param {string } value
+     */
+	public set tempMax(value: string ) {
+		this._tempMax = value;
+	}
+
+    /**
+     * Setter lumMin
+     * @param {string } value
+     */
+	public set lumMin(value: string ) {
+		this._lumMin = value;
+	}
+
+    /**
+     * Setter lumMax
+     * @param {string } value
+     */
+	public set lumMax(value: string ) {
+		this._lumMax = value;
 	}
 
 }

@@ -28,6 +28,13 @@
       <p>
         <ion-icon name="time" color="secondary"></ion-icon> {{dweet._with[0].time}}
       </p>
+      
+      <p>
+        <ion-icon name="arrow-up" color="secondary"></ion-icon> {{dweet._with[0].umidMax}}
+      </p>
+      <p>
+        <ion-icon name="arrow-down" color="secondary"></ion-icon> {{dweet._with[0].umidMin}}
+      </p>
     </div>
     <chart [options]="options" style="display: block;" type="chart"></chart>
   </div>

@@ -26,6 +26,13 @@
       <p>
         <ion-icon name="time" color="secondary"></ion-icon> {{dweet._with[0].time}}
       </p>
+
+      <p>
+        <ion-icon name="arrow-up" color="secondary"></ion-icon> {{dweet._with[0].tempMax}}
+      </p>
+      <p>
+        <ion-icon name="arrow-down" color="secondary"></ion-icon> {{dweet._with[0].tempMin}}
+      </p>
     </div>
     <chart [options]="options" style="display: block;" type="chart"></chart>
   </div>
