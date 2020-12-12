@@ -37,7 +37,7 @@
       </p>
 
       <p>
-        <ion-icon name="bell" color="secondary"></ion-icon> {{dweet._with[0].buzzerOn}}
+        <ion-icon *ngIf="dweet._with[0].buzzerOn" name="warning" color="secondary"></ion-icon>
       </p>
     </div>
     <chart [options]="options" style="display: block;" type="chart"></chart>

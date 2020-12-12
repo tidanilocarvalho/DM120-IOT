@@ -62,7 +62,7 @@ export class DweetService {
         _lightFelling = "WARM";
       }
 
-      if(_with.content.status_buzzer == "1") {
+      if (_with.content.status_buzzer == "1") {
         _buzzerOn = true;
       }
 
