@@ -15,6 +15,9 @@ export default class With {
     private _lumMin: string;
     private _lumMax: string;
 
+    private _ligthColor: string;
+    private _lightFelling: string;
+
     constructor(thing: string, 
         created: string, 
         content: Content, 
@@ -25,7 +28,9 @@ export default class With {
         tempMin: string, 
         tempMax: string,
         lumMin: string, 
-        lumMax: string) {
+        lumMax: string,
+        lightColor: string,
+        lightFeeling: string) {
 		this._thing = thing;
 		this._created = created;
 		this._content = content;
@@ -37,6 +42,8 @@ export default class With {
         this._tempMax = tempMax;
         this._lumMin = lumMin;
         this._lumMax = lumMax;
+        this._ligthColor = lightColor;
+        this._lightFelling = lightFeeling;
     }
 
     /**
@@ -214,6 +221,38 @@ export default class With {
      */
 	public set lumMax(value: string ) {
 		this._lumMax = value;
+	}
+
+    /**
+     * Getter ligthColor
+     * @return {string}
+     */
+	public get ligthColor(): string {
+		return this._ligthColor;
+	}
+
+    /**
+     * Setter ligthColor
+     * @param {string} value
+     */
+	public set ligthColor(value: string) {
+		this._ligthColor = value;
+	}
+
+    /**
+     * Getter lightFelling
+     * @return {string}
+     */
+	public get lightFelling(): string {
+		return this._lightFelling;
+	}
+
+    /**
+     * Setter lightFelling
+     * @param {string} value
+     */
+	public set lightFelling(value: string) {
+		this._lightFelling = value;
 	}
 
 }

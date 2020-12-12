@@ -35,6 +35,9 @@ export class DweetService {
     let _withs: Array<With> 
     let _date: string 
     let _time: string
+
+    let _lightColor: string;
+    let _lightFelling: string;
     
     _withs = new Array<With>() 
     
@@ -47,6 +50,17 @@ export class DweetService {
       _date = this.formatDate(_with.created) 
       _time = this.formatTime(_with.created) 
       
+      if (_with.content.current_color == "vermelho") {
+        _lightColor = "#B71C1C";
+        _lightFelling = "HOT";
+      } else if (_with.content.current_color == "verde") {
+        _lightColor = "#1B5E20";
+        _lightFelling = "COLD";
+      } else if (_with.content.current_color == "azul") {
+        _lightColor = "#01579B";
+        _lightFelling = "WARM";
+      }
+
       let tempWith: With 
       tempWith = new With(_with.thing, 
         _with.created,
@@ -58,7 +72,9 @@ export class DweetService {
         _with.content.tempMin,
         _with.content.tempMax,
         _with.content.lumMin,
-        _with.content.lumMax) 
+        _with.content.lumMax,
+        _lightColor,
+        _lightFelling) 
       
       _withs.push(tempWith) 
     }
